@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sri Lanka Railway Department</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Custom cursor styles */
+        body {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewport='0 0 100 100' style='fill:none;'><circle cx='20' cy='20' r='8' stroke='%238D153A' stroke-width='2'/></svg>") 16 16, auto;
+        }
+        
+        a, button {
+            cursor: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewport='0 0 100 100' style='fill:none;'><circle cx='20' cy='20' r='8' fill='%238D153A'/></svg>") 16 16, pointer;
+        }
+        
+        .text-maroon {
+            color: #8D153A;
+        }
+        
+        .bg-maroon {
+            background-color: #8D153A;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        /* Gradient overlay for hero section */
+        .gradient-overlay {
+            background: linear-gradient(90deg, rgba(141, 21, 57, 0.273) 0%, rgba(0,0,0,0.5) 100%);
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100 scrollbar-hide">
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <img src="https://t3.ftcdn.net/jpg/05/18/90/32/360_F_518903296_OcfW8F9cWp9WGu1670Zy7lVzvVCVGcSh.jpg" alt="SLR Logo" class="h-10 w-auto">
+                    <h1 class="ml-3 text-2xl font-bold text-gray-900">Sri Lanka <span class="text-maroon">Railways</span></h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="hidden md:block px-4 py-2 text-sm font-medium text-gray-700 hover:text-maroon transition-colors duration-300">About</button>
+                    <button class="hidden md:block px-4 py-2 text-sm font-medium text-gray-700 hover:text-maroon transition-colors duration-300">Services</button>
+                    <button class="hidden md:block px-4 py-2 text-sm font-medium text-gray-700 hover:text-maroon transition-colors duration-300">News</button>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 text-xs bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors duration-300">සිංහල</button>
+                        <button class="px-3 py-1 text-xs bg-maroon text-white rounded-md">English</button>
+                        <button class="px-3 py-1 text-xs bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 transition-colors duration-300">தமிழ்</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-cover bg-center h-screen" style="background-image: url('https://ychef.files.bbci.co.uk/1280x720/p0dmqnyd.jpg');" id="hero-section">
+        <div class="absolute inset-0 gradient-overlay"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center h-full px-4 sm:px-6 lg:px-8">
+            <div class="text-center text-white max-w-3xl">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4">Discover Sri Lanka by Rail</h2>
+                <p class="text-xl md:text-2xl mb-8">Experience the beauty of the island through its historic railway network</p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <button class="px-8 py-3 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300 flex items-center">
+                        <span>Explore Now</span>
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </button>
+                    <button class="px-8 py-3 bg-white text-maroon rounded-lg hover:bg-gray-100 transition-all duration-300 flex items-center">
+                        <i class="fas fa-play mr-2"></i>
+                        <span>Watch Video</span>
+                    </button>
+                </div>
+            </div>
+            <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i class="fas fa-chevron-down text-white text-2xl"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white" id="services">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Our Services</h2>
+                <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to plan your journey across Sri Lanka's scenic railway network</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="schedule.html" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6 group-hover:bg-maroon transition-colors duration-300">
+                            <i class="fas fa-calendar-alt text-2xl text-maroon group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Train Time Schedule</h3>
+                        <p class="text-gray-600 mb-4">View all train schedules, departure times, and arrival information</p>
+                        <div class="mt-auto">
+                            <span class="text-maroon font-medium inline-flex items-center group-hover:underline">
+                                View Schedule
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="booking.html" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6 group-hover:bg-maroon transition-colors duration-300">
+                            <i class="fas fa-ticket-alt text-2xl text-maroon group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Ticket Booking</h3>
+                        <p class="text-gray-600 mb-4">Book tickets online for your journey across Sri Lanka</p>
+                        <div class="mt-auto">
+                            <span class="text-maroon font-medium inline-flex items-center group-hover:underline">
+                                Book Now
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="map.html" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6 group-hover:bg-maroon transition-colors duration-300">
+                            <i class="fas fa-map-marked-alt text-2xl text-maroon group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Train Route Map/Location</h3>
+                        <p class="text-gray-600 mb-4">Explore train routes and track live locations</p>
+                        <div class="mt-auto">
+                            <span class="text-maroon font-medium inline-flex items-center group-hover:underline">
+                                View Map
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                
+                <a href="contact.html" class="group">
+                    <div class="bg-white rounded-xl shadow-lg p-8 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 h-full flex flex-col items-center text-center">
+                        <div class="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mb-6 group-hover:bg-maroon transition-colors duration-300">
+                            <i class="fas fa-envelope text-2xl text-maroon group-hover:text-white transition-colors duration-300"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-3">Contact Us</h3>
+                        <p class="text-gray-600 mb-4">Get in touch with our customer support team</p>
+                        <div class="mt-auto">
+                            <span class="text-maroon font-medium inline-flex items-center group-hover:underline">
+                                Contact
+                                <i class="fas fa-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100" id="popular-routes">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Popular Routes</h2>
+                <p class="mt-4 text-lg text-gray-600">Explore Sri Lanka's most scenic railway journeys</p>
+            </div>
+            
+            <div class="flex space-x-4 overflow-x-auto scrollbar-hide pb-6">
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://media.istockphoto.com/id/2150515282/photo/lotus-tower-colombo-sri-lanka.jpg?s=612x612&w=0&k=20&c=6vjhhOkfdEk94dj8L6OLL2FwcLwnvcbAtii50Ti-pwc=')"></div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Colombo to Kandy</h3>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span><i class="fas fa-clock mr-1"></i> 2.5 hours</span>
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> 121 km</span>
+                        </div>
+                        <button class="w-full py-2 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://destinationlesstravel.com/wp-content/uploads/2019/05/DSC_9600-1-1024x684-1024x684.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Kandy to Ella</h3>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span><i class="fas fa-clock mr-1"></i> 4 hours</span>
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> 156 km</span>
+                        </div>
+                        <button class="w-full py-2 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://cf.bstatic.com/xdata/images/hotel/max1024x768/176690402.jpg?k=387c7eca667c9bb0106eb68e87e102f1403603e1647498d3a935ee2180b31c77&o=&hp=1')"></div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Colombo to Galle</h3>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span><i class="fas fa-clock mr-1"></i> 2.5 hours</span>
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> 116 km</span>
+                        </div>
+                        <button class="w-full py-2 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1b/b6/09/8a/caption.jpg?w=1200&h=-1&s=1')"></div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Colombo to Jaffna</h3>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span><i class="fas fa-clock mr-1"></i> 7 hours</span>
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> 398 km</span>
+                        </div>
+                        <button class="w-full py-2 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300">View Details</button>
+                    </div>
+                </div>
+                
+                <div class="flex-shrink-0 w-72 bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://nexttravelsrilanka.com/wp-content/uploads/2023/02/Badulla-1.jpg')"></div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Colombo to Badulla</h3>
+                        <div class="flex justify-between items-center text-sm text-gray-500 mb-3">
+                            <span><i class="fas fa-clock mr-1"></i> 9 hours</span>
+                            <span><i class="fas fa-map-marker-alt mr-1"></i> 292 km</span>
+                        </div>
+                        <button class="w-full py-2 bg-maroon text-white rounded-lg hover:bg-opacity-90 transition-all duration-300">View Details</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-maroon text-white" id="quick-book">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-4xl font-bold">Quick Booking</h2>
+                <p class="mt-4 text-lg text-gray-200">Book your journey in just a few clicks</p>
+            </div>
+            
+            <div class="bg-white rounded-xl shadow-lg p-8 max-w-3xl mx-auto">
+                <form class="space-y-6">
+                    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+                        <div>
+                            <label for="from" class="block text-sm font-medium text-gray-700">From</label>
+                            <select id="from" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-maroon focus:border-maroon rounded-md">
+                                <option>Colombo Fort</option>
+                                <option>Kandy</option>
+                                <option>Galle</option>
+                                <option>Anuradhapura</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="to" class="block text-sm font-medium text-gray-700">To</label>
+                            <select id="to" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-maroon focus:border-maroon rounded-md">
+                                <option>Kandy</option>
+                                <option>Colombo Fort</option>
+                                <option>Galle</option>
+                                <option>Ella</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="date" class="block text-sm font-medium text-gray-700">Date</label>
+                            <input type="date" id="date" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-maroon focus:border-maroon rounded-md">
+                        </div>
+                        
+                        <div>
+                            <label for="passengers" class="block text-sm font-medium text-gray-700">Passengers</label>
+                            <input type="number" id="passengers" min="1" max="10" value="1" class="mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-maroon focus:border-maroon rounded-md">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-maroon hover:bg-opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-maroon transition-all duration-300">
+                            Search Trains
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white" id="stats">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-maroon mb-2">1864</div>
+                    <p class="text-gray-600">Established Year</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-maroon mb-2">320+</div>
+                    <p class="text-gray-600">Stations</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-maroon mb-2">1,500+</div>
+                    <p class="text-gray-600">Km of Track</p>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-maroon mb-2">3.5M+</div>
+                    <p class="text-gray-600">Annual Passengers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-100" id="news">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900">Latest News</h2>
+                <p class="mt-4 text-lg text-gray-600">Stay updated with the latest announcements</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://srilankamirror.com/wp-content/uploads/2023/09/Nothern_Railway_1200px_23_06_21-1000x600.jpg')"></div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-500 mb-2">March 13, 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">Northern Railway Line Reopens After Renovations</h3>
+                        <p class="text-gray-600 mb-4">The Northern Railway Line between Anuradhapura and Mahawa has reopened after renovations.</p>
+                        <a href="#" class="text-maroon font-medium hover:underline inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3FsI0OO0cIC0tFmQXCqe0CDMUf6QKif_bXA&s')"></div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-500 mb-2">March 10, 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">New Express Train Service Launched</h3>
+                        <p class="text-gray-600 mb-4">A new express train service has been launched between Colombo and Kandy.</p>
+                        <a href="#" class="text-maroon font-medium hover:underline inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="h-48 bg-cover bg-center" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK3gtJRut99h8R2oe-J9oz1V1a0M32fcY2Dg&s')"></div>
+                    <div class="p-6">
+                        <div class="text-xs text-gray-500 mb-2">March 5, 2025</div>
+                        <h3 class="font-semibold text-lg mb-3">Mobile Ticketing App Updated</h3>
+                        <p class="text-gray-600 mb-4">The Sri Lanka Railways mobile ticketing app has been updated with new features.</p>
+                        <a href="#" class="text-maroon font-medium hover:underline inline-flex items-center">
+                            Read More
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white pt-16 pb-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Sri Lanka Railways</h3>
+                    <p class="text-gray-400 mb-6">Sri Lanka Railways (SLR) is a government department functioning under the Ministry of Transport, operating the nation's railways linking Colombo with other population centers.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">News</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="schedule.html" class="text-gray-400 hover:text-white">Train Time Schedule</a></li>
+                        <li><a href="booking.html" class="text-gray-400 hover:text-white">Ticket Booking</a></li>
+                        <li><a href="map.html" class="text-gray-400 hover:text-white">Train Route Map</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Parcel Service</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Special Trains</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-semibold mb-4">Contact Us</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-3"></i>
+                            <span>Sri Lanka Railways, Colombo Fort, Sri Lanka</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-3"></i>
+                            <span>+94 11 2421281</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-3"></i>
+                            <span>info@railway.gov.lk</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-6">
+                <p class="text-center text-gray-400">&copy; 2025 Sri Lanka Railway Department. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script>
+        // Initialize GSAP
+        gsap.registerPlugin(ScrollTrigger);
+        
+       // Navigation animation
+       gsap.from('nav', { 
+            duration: 1, 
+            y: -100, 
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        // Hero section animation
+        gsap.from('#hero-section .text-center', { 
+            duration: 1.5, 
+            y: 50, 
+            opacity: 0,
+            delay: 0.5,
+            ease: 'power3.out'
+        });
+        
+        // Services section animations
+        gsap.from('#services .text-center', {
+            scrollTrigger: {
+                trigger: '#services',
+                start: 'top 80%',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        gsap.from('#services .group', {
+            scrollTrigger: {
+                trigger: '#services .grid',
+                start: 'top 80%',
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out'
+        });
+        
+        // Popular routes animations
+        gsap.from('#popular-routes .text-center', {
+            scrollTrigger: {
+                trigger: '#popular-routes',
+                start: 'top 80%',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        gsap.from('#popular-routes .flex-shrink-0', {
+            scrollTrigger: {
+                trigger: '#popular-routes .flex',
+                start: 'top 80%',
+            },
+            duration: 0.8,
+            x: 100,
+            opacity: 0,
+            stagger: 0.15,
+            ease: 'power3.out'
+        });
+        
+        // Quick booking animations
+        gsap.from('#quick-book .text-center', {
+            scrollTrigger: {
+                trigger: '#quick-book',
+                start: 'top 80%',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        gsap.from('#quick-book form', {
+            scrollTrigger: {
+                trigger: '#quick-book form',
+                start: 'top 80%',
+            },
+            duration: 1,
+            y: 30,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        // Stats animations
+        gsap.from('#stats .text-4xl', {
+            scrollTrigger: {
+                trigger: '#stats',
+                start: 'top 80%',
+            },
+            duration: 1.5,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out',
+            onStart: function() {
+                // Counter animation for stats
+                const statsElements = document.querySelectorAll('#stats .text-4xl');
+                statsElements.forEach(stat => {
+                    const value = stat.textContent;
+                    const hasPlus = value.includes('+');
+                    const numValue = parseFloat(value.replace(/[^0-9.]/g, ''));
+                    
+                    let startValue = 0;
+                    const duration = 1.5;
+                    const interval = 16;
+                    const totalSteps = duration * 1000 / interval;
+                    const stepValue = numValue / totalSteps;
+                    
+                    function updateCounter() {
+                        startValue += stepValue;
+                        if(startValue < numValue) {
+                            stat.textContent = Math.floor(startValue) + (hasPlus ? '+' : '');
+                            setTimeout(updateCounter, interval);
+                        } else {
+                            stat.textContent = value;
+                        }
+                    }
+                    
+                    updateCounter();
+                });
+            }
+        });
+        
+        // News animations
+        gsap.from('#news .text-center', {
+            scrollTrigger: {
+                trigger: '#news',
+                start: 'top 80%',
+            },
+            duration: 1,
+            y: 50,
+            opacity: 0,
+            ease: 'power3.out'
+        });
+        
+        gsap.from('#news .bg-white', {
+            scrollTrigger: {
+                trigger: '#news .grid',
+                start: 'top 80%',
+            },
+            duration: 0.8,
+            y: 50,
+            opacity: 0,
+            stagger: 0.2,
+            ease: 'power3.out'
+        });
+        
+        // Footer animations
+        gsap.from('footer .grid > div', {
+            scrollTrigger: {
+                trigger: 'footer',
+                start: 'top 90%',
+            },
+            duration: 0.8,
+            y: 30,
+            opacity: 0,
+            stagger: 0.15,
+            ease: 'power3.out'
+        });
+        
+        // Smooth scrolling implementation
+        const lenis = new Lenis({
+            duration: 1.2,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+            direction: 'vertical',
+            gestureDirection: 'vertical',
+            smooth: true,
+            mouseMultiplier: 1,
+            smoothTouch: false,
+            touchMultiplier: 2,
+            infinite: false,
+        });
+
+        function raf(time) {
+            lenis.raf(time);
+            requestAnimationFrame(raf);
+        }
+
+        requestAnimationFrame(raf);
+    </script>
+</body>
+</html>
